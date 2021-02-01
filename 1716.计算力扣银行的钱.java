@@ -8,6 +8,13 @@
 class Solution {
     public int totalMoney(int n) {
 
+        if(n <= 7){
+            return (1+n)*n/2;
+        }
+        
+        int w = n/7;
+        int day = n%7;
+        return (28+21+7*w)*w/2 + (w+w+day+1)*day/2;
     }
 }
 // @lc code=end
